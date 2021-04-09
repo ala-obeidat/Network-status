@@ -2,7 +2,7 @@
 
 
 
-
+const intervalToCheckInSeconds = 3;
 const speedDisplay = document.getElementById("speed");
 const statusDisplay = document.getElementById("status");
 
@@ -41,7 +41,7 @@ statusDisplay.textContent = await checkOnlineStatus() ? "Online" : "OFFline";
 }
 setInterval(async () => { 
   await SetStatusDisplayContet();
-}, 3000); 
+}, intervalToCheckInSeconds * 1000); 
 
 // forgot to include async load event listener in the video! 
 window.addEventListener("load", async (event) => { 

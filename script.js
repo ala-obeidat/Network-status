@@ -36,7 +36,7 @@ const checkOnlineStatus = async () => {
     return false; // definitely offline
   }
 };
-const SetStatusDisplayContet async () => {
+const SetStatusDisplayContet = async () => {
 statusDisplay.textContent = await checkOnlineStatus() ? "Online" : "OFFline";
 }
 setInterval(async () => { 

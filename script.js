@@ -36,13 +36,14 @@ const checkOnlineStatus = async () => {
     return false; // definitely offline
   }
 };
-
+const SetStatusDisplayContet async () => {
+statusDisplay.textContent = await checkOnlineStatus() ? "Online" : "OFFline";
+}
 setInterval(async () => { 
-  statusDisplay.textContent = await checkOnlineStatus() ? "Online" : "OFFline";
+  await SetStatusDisplayContet();
 }, 3000); 
 
 // forgot to include async load event listener in the video! 
-window.addEventListener("load", async (event) => {
-  const statusDisplay = document.getElementById("status");
-  statusDisplay.textContent = (await checkOnlineStatus()) ? "Online" : "OFFline";
+window.addEventListener("load", async (event) => { 
+  await SetStatusDisplayContet();
 });

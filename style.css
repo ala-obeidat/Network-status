@@ -1,0 +1,28 @@
+.speed-Excellent{
+	display: inline-block;
+	color: #000;
+	background-color: #00ff00;
+}
+.result-Online{
+	display: inline-block;
+}
+.result-OFFline,.speed-No{
+	display: inline-block;
+	color: #fff;
+	background-color: darkred;
+}
+.speed-Good{
+	display: inline-block;
+	color: #fff;
+	background-color: #ffaa00;
+}
+.speed-Poor{
+	display: inline-block;
+	color: #fff;
+	background-color: #aa9900;
+}
+.speed-Slow{
+	display: inline-block;
+	color: #fff;
+	background-color: #aa1000;
+}
